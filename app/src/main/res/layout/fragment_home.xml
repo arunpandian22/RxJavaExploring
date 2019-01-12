@@ -1,0 +1,73 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigationHome"
+    style="@style/fragment_style">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <me.arun.arunrxjavaexploring.utils.CustomActionBar
+                android:id="@+id/actionBar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/ab_height"
+                app:title="@string/titleHome"
+                app:type="7" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <android.support.v4.widget.SwipeRefreshLayout
+                    android:id="@+id/swipeRefreshLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/rvListing"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingLeft="@dimen/cl_list_LR_padding"
+                            android:paddingRight="@dimen/cl_list_LR_padding"
+                            android:paddingTop="@dimen/items_inbetween_large" />
+
+                        <FrameLayout
+                            android:id="@+id/emptyFrame"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/windowBackground"
+                            android:visibility="gone">
+
+                        </FrameLayout>
+
+
+                    </RelativeLayout>
+
+
+                </android.support.v4.widget.SwipeRefreshLayout>
+
+
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/flBottomStrip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"></FrameLayout>
+    </RelativeLayout>
+
+</FrameLayout>

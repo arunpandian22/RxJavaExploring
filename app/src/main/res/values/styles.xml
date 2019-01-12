@@ -1,0 +1,198 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        ">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!--Bottom Navigation Style-->
+
+    <style name="BottomNavigationViewStyle" parent="Widget.Design.BottomNavigationView">
+        <item name="android:fontFamily">@font/lato_bold</item>
+    </style>
+
+    <!--// Fragment base style-->
+
+    <style name="fragment_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/windowBackground</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+    </style>
+
+
+    <!--Apple ActionBar Style-->
+
+    <style name="ab_icon_style">
+        <item name="android:layout_width">@dimen/ab_icon_size</item>
+        <item name="android:padding">@dimen/ab_iv_padding</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="ab_text_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:textSize">@dimen/ab_text_size</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textColor">@color/actionBarTitleTextColor</item>
+    </style>
+
+
+
+<!--Style for the collection-->
+    <style name="cli_banner_style" >
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/cli_image_size</item>
+        <item name="android:scaleType">centerCrop</item>
+    </style>
+
+    <style name="cli_title_text_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/large_text</item>
+        <item name="android:textColor">@color/cl_title_text_color</item>
+        <item name="android:fontFamily">@font/lato_semibold</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:lines">1</item>
+    </style>
+
+    <style name="cli_listings_text_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/small_text</item>
+        <item name="android:textColor">@color/cl_listing_text_color</item>
+        <item name="android:fontFamily">@font/lato_regular</item>
+    </style>
+
+    <style name="cli_price_text_style" parent="cli_listings_text_style">
+        <item name="android:textColor">@color/cl_price_text_color</item>
+        <item name="android:fontFamily">@font/lato_semibold</item>
+    </style>
+
+
+    <!-- Text Size. -->
+
+    <dimen name="xsmall_text">@dimen/_7sdp</dimen>
+    <dimen name="small_text">@dimen/_9sdp</dimen>
+    <dimen name="medium_text">@dimen/_10sdp</dimen>
+    <dimen name="large_text">@dimen/_12sdp</dimen>
+    <dimen name="xlarge_text">@dimen/_14sdp</dimen>
+    <dimen name="xxlarge_text">@dimen/_16sdp</dimen>
+    <dimen name="xxxlarge_text">@dimen/_18sdp</dimen>
+
+    <dimen name="welcome_header_text">@dimen/_26sdp</dimen>
+    <dimen name="section_header">@dimen/_24sdp</dimen>
+
+
+
+
+     <!--Styles for the place-->
+
+    <style name="pi_parent_text_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/items_inbetween_xsmall</item>
+    </style>
+
+    <style name="pi_title_text_style" parent="pi_parent_text_style">
+        <item name="android:textSize">@dimen/xlarge_text</item>
+        <item name="android:textColor">@color/pl_title_text_color</item>
+        <item name="android:fontFamily">@font/lato_bold</item>
+    </style>
+
+    <style name="pi_byline_text_style" parent="pi_parent_text_style">
+        <item name="android:textSize">@dimen/medium_text</item>
+        <item name="android:textColor">@color/pl_byline_text_color</item>
+        <item name="android:fontFamily">@font/lato_regular</item>
+    </style>
+
+    <style name="pi_location_text_style" parent="pi_byline_text_style">
+        <item name="android:textColor">@color/pl_location_text_color</item>
+    </style>
+
+    <style name="pi_status_text_style" parent="pi_parent_text_style">
+        <item name="android:layout_weight">1.4</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:textSize">@dimen/large_text</item>
+        <item name="android:paddingBottom">2dp</item>
+        <item name="android:textColor">@color/pl_status_open_text_color</item>
+        <item name="android:fontFamily">@font/lato_regular</item>
+    </style>
+
+    <style name="pi_price_text_style" parent="pi_parent_text_style">
+        <item name="android:layout_weight">0.6</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:gravity">right</item>
+        <item name="android:textSize">@dimen/large_text</item>
+        <item name="android:textColor">@color/pl_price_text_color_enable</item>
+        <item name="android:fontFamily">@font/lato_regular</item>
+    </style>
+
+    <style name="pi_divider_line">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@color/dividerLineColor</item>
+        <item name="android:layout_marginTop">@dimen/items_inbetween_medium</item>
+    </style>
+
+    <style name="pi_cta_option">
+        <item name="android:layout_height">@dimen/_18sdp</item>
+        <item name="android:layout_width">@dimen/_18sdp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:padding">2dp</item>
+        <item name="android:layout_margin">2dp</item>
+        <item name="android:scaleType">fitCenter</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="pi_fav_icon">
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">20dp</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="pi_cta_option2">
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">20dp</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="pi_cta_option_vertical">
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">20dp</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="pi_cta_text">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingLeft">@dimen/_8sdp</item>
+    </style>
+
+    <style name="buy_collection_btn">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:textSize">@dimen/xxxlarge_text</item>
+        <item name="android:fontFamily">@font/lato_bold</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/pl_status_close_text_color</item>
+        <item name="android:background">@drawable/buy_btn_border</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+
+
+
+
+
+</resources>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="windowBackground">#FFFFFF</color>
+
+    <color name="colorPrimary">#F8F8F8</color>
+    <color name="colorPrimaryDark">#487FF8</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="colorAbTitle">#487FF8</color>
+    <color name="colorActionBar">#F8F8F8</color>
+    <color name="colorPrimaryHeaderText">#4F4F4F</color>
+    <color name="colorIconBackground">#D2D4DB</color>
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorBlack">#000000</color>
+
+
+    <color name="dividerLineColor">#E0E0E0</color>
+    <!--Bottom Navigation-->
+
+    <color name="navigationSelectedColor">#E02222</color>
+    <color name="navigationDefaultColor">#828282</color>
+
+
+
+    <!--Action bar -->
+
+    <color name="actionBarTitleTextColor">#E02222</color>
+    <color name="overFlowSelectedTextColor">#FFFFFF</color>
+    <color name="overFlowCountTextColor">#FFFFFF</color>
+    <color name="overFlowIdleTextColor">#E02222</color>
+
+
+    <!--Bottom Strip-->
+
+    <color name="bottomStripDefaultColor">#333333</color>
+    <color name="bottomStripNetworkAvailable">#219653</color>
+
+    <!--Empty State(es)-->
+
+    <color name="esTitleTextColor">#747575</color>
+    <color name="esDescTextColor">#747575</color>
+
+    <!--Place Listing card(pl)-->
+
+    <color name="pl_title_text_color">#000000</color>
+    <color name="pl_byline_text_color">#828282</color>
+    <color name="pl_location_text_color">#4F4F4F</color>
+    <color name="pl_status_open_text_color">#219653</color>
+    <color name="pl_status_close_text_color">#EB5757</color>
+    <color name="pl_price_text_color_enable">#F2994A</color>
+    <color name="pl_price_text_color_disable">#BDBDBD</color>
+    <color name="pl_icons_drawable_color">#828282</color>
+
+    <!--Collection Listing card(cl)-->
+
+    <color name="cl_title_text_color">#333333</color>
+    <color name="cl_listing_text_color">#4F4F4F</color>
+    <color name="cl_price_text_color">#FF7800</color>
+    <color name="cl_price_nonfill_color">#828282</color>
+    <color name="cl_explore_text_color">#006DFF</color>
+    <color name="cl_free_text_color">#219653</color>
+    <color name="cl_divider_color">#C4C4C4</color>
+
+    <!--ReadMore Common-->
+    <color name="rm_tv_grayLight">#828282</color>
+    <color name="rm_tv_black">#333333</color>
+    <color name="rm_tv_red">#E02222</color>
+
+    <!--Details View-->
+    <color name="dv_status_open">#219653</color>
+    <color name="dv_status_close">#E02222</color>
+    <color name="dv_tv_black">#000000</color>
+    <color name="dv_divider_color">#E0E0E0</color>
+    <color name="dv_title_color">#828282</color>
+    <color name="dv_hyperlink">#2F80ED</color>
+
+    <!-- Search View (sv)  -->
+    <color name="sv_current_search_label_text_color">#4F4F4F</color>
+    <color name="svSpinnerUnSelectedTextColor">#828282</color>
+    <color name="searchGray">#ccc</color>
+
+    <!-- Search Results Listing (sr)  -->
+
+    <color name="sr_current_search_label_text_color">#4F4F4F</color>
+    <color name="sr_current_search_key_text_color">#E02222</color>
+
+
+    <!--filter page-->
+    <color name="filterButtonselectedColor">#E02222</color>
+
+    <!--About Page(ap) -->
+    <color name="apAppNameColor">#333333</color>
+    <color name="appVersionColor">#828282</color>
+    <color name="appDescriptionColor">#000000</color>
+
+    <!--FullScreenImage(fci)-->
+    <color name="fci_bg_color">#000000</color>
+
+    <!--settings page (sp)-->
+    <color name="sp_content_color">#333333</color>
+
+    <!--filter page color-->
+    <color name="fp_type_option_text_color">#828282</color>
+
+    <color name="menuDiableColor">#80E02222</color>
+
+    <!--internet back stripe(ibs) color-->
+    <color name="ibsColor">#219653</color>
+    <!--no internet stripe color-->
+    <color name="nisColor">#333333</color>
+
+</resources>

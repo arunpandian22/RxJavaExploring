@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="paddingVertical">@dimen/_13sdp</dimen>
+    <dimen name="paddingHorizontal">@dimen/_13sdp</dimen>
+    <dimen name="radiusCategory">@dimen/_4sdp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+
+
+    <!-- Collection List Item style.(cli) -->
+
+    <dimen name="cli_image_size">@dimen/_86sdp</dimen>
+    <dimen name="cli_cv_margin">@dimen/_4sdp</dimen>
+    <dimen name="cli_cv_cornor_radius">@dimen/_6sdp</dimen>
+    <dimen name="cl_list_LR_padding">@dimen/_8sdp</dimen>
+
+
+    <!-- Common sizes. -->
+
+    <dimen name="items_inbetween_xsmall">@dimen/_3sdp</dimen>
+    <dimen name="items_inbetween_small">@dimen/_6sdp</dimen>
+    <dimen name="items_inbetween_medium">@dimen/_8sdp</dimen>
+    <dimen name="items_inbetween_large">@dimen/_10sdp</dimen>
+
+
+
+    <!-- ActionBar style.(ab) -->
+
+    <dimen name="ab_height">@dimen/_46sdp</dimen>
+    <dimen name="ab_iv_padding">@dimen/_9sdp</dimen>
+    <dimen name="ab_text_size">@dimen/_16sdp</dimen>
+    <dimen name="ab_icon_size">@dimen/_42sdp</dimen>
+    <dimen name="ab_title_right_padding">@dimen/_72sdp</dimen>
+
+
+
+    <!--Buy Collection Item(bci)    -->
+    <dimen name="bci_height">@dimen/_113sdp</dimen>
+    <dimen name="bci_btn_corner_radius">@dimen/_9sdp</dimen>
+
+</resources>

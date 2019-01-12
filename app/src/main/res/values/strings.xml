@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">ArunRXJavaExploring</string>
+
+    <!--Bottom navigation menu titles-->
+
+    <string name="navHome">Home</string>
+    <string name="navSearch">Search</string>
+    <string name="navFavorite">Favourites</string>
+    <string name="navSettings">Settings</string>
+
+
+    <!--ActionBar Titles -->
+
+    <string name="titleHome">Listado</string>
+    <string name="titleLocation">Location</string>
+    <string name="titleSearch">Search</string>
+    <string name="titleSearchResults">Search</string>
+    <string name="titleFavourites">Favourites</string>
+    <string name="titleAboutApp">About App</string>
+    <string name="titleAboutAuthor">About Curator</string>
+    <string name="titleOfflineDownloads">Offline downloads </string>
+    <string name="titlePhotos">Photos</string>
+
+
+    <string name="cli_banner_image_desc">Banner Image</string>
+    <string name="cli_collection_name">Sample Collection</string>
+    <string name="cli_sample_listing">__ Listings</string>
+    <string name="cli_pricing_state_free">Free</string>
+    <string name="cli_pricing_state_available">Explore</string>
+    <string name="cli_pricing_state_purchase">$-:—</string>
+
+</resources>
