@@ -1,14 +1,13 @@
 package me.arun.arunrxjavaexploring;
 
 import android.support.annotation.StringDef;
-
 import java.lang.annotation.Retention;
-
 import static java.lang.annotation.RetentionPolicy.SOURCE;
-import static me.arun.arunrxjavaexploring.FeatureCategory.FILE_DOWNLOAD;
-import static me.arun.arunrxjavaexploring.FeatureCategory.FILE_UPLOAD;
-import static me.arun.arunrxjavaexploring.FeatureCategory.GRAPH_QL;
-import static me.arun.arunrxjavaexploring.FeatureCategory.SAMPLE_REQUEST;
+import static me.arun.arunrxjavaexploring.FeatureCategory.CHAINING;
+import static me.arun.arunrxjavaexploring.FeatureCategory.NETWORK;
+import static me.arun.arunrxjavaexploring.FeatureCategory.OPERATOR;
+import static me.arun.arunrxjavaexploring.FeatureCategory.PAGINATION;
+import static me.arun.arunrxjavaexploring.FeatureCategory.ROOMDB;
 
 
 /**
@@ -18,11 +17,12 @@ import static me.arun.arunrxjavaexploring.FeatureCategory.SAMPLE_REQUEST;
  */
 
 @Retention(SOURCE)
-@StringDef({SAMPLE_REQUEST,FILE_UPLOAD,FILE_DOWNLOAD,GRAPH_QL})
+@StringDef({ROOMDB,NETWORK,CHAINING,PAGINATION,OPERATOR})
 public @interface FeatureCategory
 {
-    String SAMPLE_REQUEST="SampleRequest";
-    String FILE_UPLOAD="FileUpload";
-    String FILE_DOWNLOAD="FileDownload";
-    String GRAPH_QL="GraphQlRequest";
+    String ROOMDB="RxJava in Db";
+    String NETWORK="RxJava operators and transformation";
+    String CHAINING="RxJava chaining API Call";
+    String PAGINATION="Pagination in RxJava";
+    String OPERATOR="RxJava Operators";
 }

@@ -43,13 +43,13 @@ public class HomeActivity extends AppCompatActivity {
 
     public void setFeatureCategoryList()
     {
-        ModelFeatureCategory sampleRequest = new ModelFeatureCategory("@drawable/ic_network_request", FeatureCategory.SAMPLE_REQUEST);
+        ModelFeatureCategory sampleRequest = new ModelFeatureCategory("@drawable/ic_network_request", FeatureCategory.OPERATOR);
         modelFeatureCategories.add(sampleRequest);
-        ModelFeatureCategory fileUpload = new ModelFeatureCategory("@drawable/ic_network_request", FeatureCategory.FILE_UPLOAD);
+        ModelFeatureCategory fileUpload = new ModelFeatureCategory("@drawable/ic_network_request", FeatureCategory.ROOMDB);
         modelFeatureCategories.add(fileUpload);
-        ModelFeatureCategory fileDownLoad = new ModelFeatureCategory("@drawable/ic_network_request",FeatureCategory.FILE_DOWNLOAD);
+        ModelFeatureCategory fileDownLoad = new ModelFeatureCategory("@drawable/ic_network_request",FeatureCategory.CHAINING);
         modelFeatureCategories.add(fileDownLoad);
-        ModelFeatureCategory graphQl = new ModelFeatureCategory("@drawable/ic_network_request",FeatureCategory.GRAPH_QL);
+        ModelFeatureCategory graphQl = new ModelFeatureCategory("@drawable/ic_network_request",FeatureCategory.PAGINATION);
         modelFeatureCategories.add(graphQl);
     }
 }

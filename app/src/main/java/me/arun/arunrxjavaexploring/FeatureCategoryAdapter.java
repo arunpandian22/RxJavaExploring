@@ -68,20 +68,25 @@ public class FeatureCategoryAdapter extends RecyclerView.Adapter<FeatureCategory
      */
     public void reDirectActivity(@FeatureCategory String title)
     {
-        switch (title) {
-            case FeatureCategory.SAMPLE_REQUEST:
+        switch (title)
+        {
+
+            case FeatureCategory.OPERATOR:
+
+
+                break;
+            case FeatureCategory.ROOMDB:
 //                activity.startActivity(new Intent(activity, SampleRequestActivity.class));
                 break;
 
-            case FeatureCategory.FILE_DOWNLOAD:
+            case FeatureCategory.NETWORK:
 //                activity.startActivity(new Intent(activity, FileDownloadActivity.class));
                 break;
 
-            case FeatureCategory.FILE_UPLOAD:
+            case FeatureCategory.CHAINING:
 //                activity.startActivity(new Intent(activity, FileUploadActivity.class));
                 break;
 
-            case FeatureCategory.GRAPH_QL:
 //                activity.startActivity(new Intent(activity, GraphQlActivity.class));
 
         }
