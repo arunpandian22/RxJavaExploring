@@ -43,6 +43,10 @@ public class HomeActivity extends AppCompatActivity {
 
     public void setFeatureCategoryList()
     {
+
+        ModelFeatureCategory networkRequest = new ModelFeatureCategory("@drawable/ic_network_request", FeatureCategory.NETWORK);
+        modelFeatureCategories.add(networkRequest);
+
         ModelFeatureCategory sampleRequest = new ModelFeatureCategory("@drawable/ic_network_request", FeatureCategory.OPERATOR);
         modelFeatureCategories.add(sampleRequest);
         ModelFeatureCategory fileUpload = new ModelFeatureCategory("@drawable/ic_network_request", FeatureCategory.ROOMDB);

@@ -1,12 +1,14 @@
 package me.arun.arunrxjavaexploring;
-
 import android.app.Activity;
+import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CalendarView;
+import android.widget.DatePicker;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -15,6 +17,10 @@ import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import me.arun.arunrxjavaexploring.NetWork.RxNetworkActivity;
+import me.arun.arunrxjavaexploring.NetWork.SampleRequestActivity;
+import me.arun.arunrxjavaexploring.RoomDB.RoomDbMainActivity;
+import me.arun.arunrxjavaexploring.pagination.PaginationActivity;
 
 /**
  * A Adapter class to list the categorys in grid
@@ -32,6 +38,7 @@ public class FeatureCategoryAdapter extends RecyclerView.Adapter<FeatureCategory
     public FeatureCategoryAdapter(Activity activity, List<ModelFeatureCategory> listModelFeatureList) {
         this.activity = activity;
         this.listModelFeatureList = listModelFeatureList;
+
     }
 
     @Override
@@ -76,15 +83,15 @@ public class FeatureCategoryAdapter extends RecyclerView.Adapter<FeatureCategory
 
                 break;
             case FeatureCategory.ROOMDB:
-//                activity.startActivity(new Intent(activity, SampleRequestActivity.class));
+                activity.startActivity(new Intent(activity, RoomDbMainActivity.class));
                 break;
 
             case FeatureCategory.NETWORK:
-//                activity.startActivity(new Intent(activity, FileDownloadActivity.class));
+                activity.startActivity(new Intent(activity, SampleRequestActivity.class));
                 break;
 
-            case FeatureCategory.CHAINING:
-//                activity.startActivity(new Intent(activity, FileUploadActivity.class));
+            case FeatureCategory.PAGINATION:
+                activity.startActivity(new Intent(activity, PaginationActivity.class));
                 break;
 
 //                activity.startActivity(new Intent(activity, GraphQlActivity.class));

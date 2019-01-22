@@ -6,6 +6,7 @@ import java.util.List;
 import io.reactivex.Completable;
 import io.reactivex.Observable;
 import io.reactivex.Single;
+import me.arun.arunrxjavaexploring.RoomDB.models.response.nowPlaying.ModelNowPlayingMovie;
 import me.arun.arunrxjavaexploring.model.collection.CollectionListModel;
 import me.arun.arunrxjavaexploring.model.placeList.PlaceListModel;
 import okhttp3.RequestBody;
@@ -41,9 +42,18 @@ public interface InterfaceService
     @GET("collections")
     Single<CollectionListModel> makeCollectionApiCall(@Header("deviceid") String deviceid);
 
+
     @Headers({"Accept: application/json"})
     @GET("lists")
     Single<PlaceListModel> makePlaceListApiCall(@Header("deviceid") String deviceid, @Query("collectionId") String collectionId);
+
+    @Headers({"Accept: application/json"})
+    @GET("now_playing")
+    Single<ModelNowPlayingMovie> makeMoviesApiCall(@Query("api_key") String apiKey);
+
+
+
+
 //    // Register new user
 //    @FormUrlEncoded
 //    @POST("notes/user/register")
