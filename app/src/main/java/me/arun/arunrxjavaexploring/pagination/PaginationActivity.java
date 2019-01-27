@@ -1,5 +1,4 @@
 package me.arun.arunrxjavaexploring.pagination;
-
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
@@ -20,8 +19,6 @@ import io.reactivex.functions.Function;
 import io.reactivex.processors.PublishProcessor;
 import me.arun.arunrxjavaexploring.R;
 import me.arun.arunrxjavaexploring.User;
-
-
 public class PaginationActivity extends AppCompatActivity
 {
     public static final String TAG = PaginationActivity.class.getSimpleName();

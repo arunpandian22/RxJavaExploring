@@ -29,4 +29,39 @@
     <string name="cli_pricing_state_available">Explore</string>
     <string name="cli_pricing_state_purchase">$-:—</string>
 
+
+    <!--//operaters-->
+
+    <string name="basic">Just</string>
+    <string name="create">Create</string>
+    <string name="From">From</string>
+    <string name="interval">Interval</string>
+
+    <string name="observableOperator">Observable Operators</string>
+    <string name="combineOperators">Combine Operators</string>
+    <string name="filteringOperator">Filtering Operators</string>
+    <string name="transformingOperater">Transforming Operators</string>
+    <string name="utilityOperater">Utility Operaters</string>
+    <string name="conditionBooleanOperator">Condition Boolean Operators</string>
+
+
+
+    <!--CombineOperators-->
+    <string name="combineLatestOperator">combineLatest</string>
+    <string name="joinOperater">join</string>
+    <string name="concatOperater">concat</string>
+    <string name="mergeOperater">merge</string>
+    <string name="zipOperater">zip</string>
+    <string name="switchOnNext">switchOnNext</string>
+
+    <string name="allOperater"></string>
+    <string name="ampOperater"> </string>
+    <string name="containsOperater">containsOperater</string>
+    <string name="defaultEmptyOperater">containsOperater</string>
+    <string name="sequentialOperater">containsOperater</string>
+    <string name="skipUntilOperater">containsOperater</string>
+    <string name="skipWhile">containsOperater</string>
+    <string name="takeUntilOperater">containsOperater</string>
+    <string name="takeWhile">containsOperater</string>
+
 </resources>

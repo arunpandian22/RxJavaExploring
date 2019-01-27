@@ -11,15 +11,14 @@ import android.widget.CalendarView;
 import android.widget.DatePicker;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import java.util.ArrayList;
 import java.util.List;
-
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import me.arun.arunrxjavaexploring.NetWork.RxNetworkActivity;
 import me.arun.arunrxjavaexploring.NetWork.SampleRequestActivity;
 import me.arun.arunrxjavaexploring.RoomDB.RoomDbMainActivity;
+import me.arun.arunrxjavaexploring.RxOperaters.OperatorsActivity;
 import me.arun.arunrxjavaexploring.pagination.PaginationActivity;
 
 /**
@@ -79,9 +78,10 @@ public class FeatureCategoryAdapter extends RecyclerView.Adapter<FeatureCategory
         {
 
             case FeatureCategory.OPERATOR:
-
-
+                activity.startActivity(new Intent(activity, OperatorsActivity.class));
                 break;
+
+
             case FeatureCategory.ROOMDB:
                 activity.startActivity(new Intent(activity, RoomDbMainActivity.class));
                 break;
@@ -110,7 +110,8 @@ public class FeatureCategoryAdapter extends RecyclerView.Adapter<FeatureCategory
     /**
      * A viewHolder class for Image items
      */
-    public class ViewHolder extends RecyclerView.ViewHolder {
+    public class ViewHolder extends RecyclerView.ViewHolder
+    {
         @BindView(R.id.ivCategoryIcon)
         ImageView ivCategoryIcon;
         @BindView(R.id.tvCateogryTitle)

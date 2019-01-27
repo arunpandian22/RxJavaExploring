@@ -75,8 +75,8 @@ public class SampleRequestActivity extends AppCompatActivity
         movieListAdapter=new MovieListAdapter(this,movieList);
         rvMovieList.setLayoutManager(layoutManager);
         rvMovieList.setAdapter(movieListAdapter);
-        setUpLoadMoreListener();
-
+//        setUpLoadMoreListener();
+//
 
         compositeDisposable.add(
                 getCollectionListModel()
@@ -97,7 +97,7 @@ public class SampleRequestActivity extends AppCompatActivity
 
                     @Override
                     public void onError(Throwable e) {
-
+                        Log.d(TAG, "onError: ");
                     }
                 }));
 

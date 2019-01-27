@@ -5,14 +5,12 @@ import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.widget.Toolbar;
-
 import java.util.ArrayList;
 import java.util.List;
-
 import butterknife.BindView;
 import butterknife.ButterKnife;
-
-public class HomeActivity extends AppCompatActivity {
+public class HomeActivity extends AppCompatActivity
+{
 
     List<ModelFeatureCategory> modelFeatureCategories = new ArrayList<>();
     @BindView(R.id.toolbar)
@@ -32,8 +30,8 @@ public class HomeActivity extends AppCompatActivity {
         RecyclerView.LayoutManager layoutManager=new GridLayoutManager(this,2);
         rvFeatureCategory.setLayoutManager(layoutManager);
         rvFeatureCategory.setAdapter(featureCategoryAdapter);
-
     }
+
     public void toolbarSetup()
     {
         toolbar.setTitleTextColor(getResources().getColor(R.color.colorPrimary));
@@ -43,10 +41,8 @@ public class HomeActivity extends AppCompatActivity {
 
     public void setFeatureCategoryList()
     {
-
         ModelFeatureCategory networkRequest = new ModelFeatureCategory("@drawable/ic_network_request", FeatureCategory.NETWORK);
         modelFeatureCategories.add(networkRequest);
-
         ModelFeatureCategory sampleRequest = new ModelFeatureCategory("@drawable/ic_network_request", FeatureCategory.OPERATOR);
         modelFeatureCategories.add(sampleRequest);
         ModelFeatureCategory fileUpload = new ModelFeatureCategory("@drawable/ic_network_request", FeatureCategory.ROOMDB);

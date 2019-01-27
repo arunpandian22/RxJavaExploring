@@ -22,13 +22,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".RxBasicActivity" />
-        <activity android:name=".RoomDB.RoomDbMainActivity"></activity>
+        <activity android:name=".RoomDB.RoomDbMainActivity" />
         <activity android:name=".CustomOperators.CustomOperaterActivity" />
-        <activity android:name=".NetWork.RxNetworkActivity"></activity>
-        <activity android:name=".pagination.PaginationActivity"></activity>
-        <activity android:name=".rxBus.RXBusChaeckActivity">
-
-        </activity>
+        <activity android:name=".NetWork.RxNetworkActivity" />
+        <activity android:name=".pagination.PaginationActivity" />
+        <activity android:name=".rxBus.RXBusChaeckActivity" />
         <activity android:name=".synchronize.SynchronizedActivity" />
         <activity android:name=".WithRxJava.RxHomeActivity" />
         <activity android:name=".WoRxJava.NormalHomeActivity" />
@@ -38,10 +36,23 @@
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <action android:name="android.intent.action.VIEW" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity android:name=".NetWork.SampleRequestActivity" />
+        <activity android:name=".RxOperaters.OperatorsActivity" />
+        <activity android:name=".RxOperaters.FromOperatorActivity" />
+        <activity android:name=".RxOperaters.GroupBy" />
+        <activity android:name=".RxOperaters.ScanActivity" />
+        <activity android:name=".RxOperaters.DistinctActivity" />
+        <activity android:name=".RxOperaters.ObservableOperaterActivity" />
+        <activity android:name=".RxOperaters.TransFormingOperater" />
+        <activity android:name=".RxOperaters.FilteringActivity" />
+        <activity android:name=".RxOperaters.CombinOperaterActivtiy" />
+        <activity android:name=".RxOperaters.UtilityOperater" />
+        <activity android:name=".RxOperaters.ConditionBololeanOperater" />
+        <activity android:name=".Observables.ObservableActivity"></activity>
     </application>
 
 </manifest>
