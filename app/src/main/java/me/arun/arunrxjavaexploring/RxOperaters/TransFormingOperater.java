@@ -2,11 +2,10 @@ package me.arun.arunrxjavaexploring.RxOperaters;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
-
 import java.util.Arrays;
 import java.util.List;
-
 import io.reactivex.Observable;
 import io.reactivex.ObservableEmitter;
 import io.reactivex.ObservableOnSubscribe;
@@ -20,6 +19,7 @@ import me.arun.arunrxjavaexploring.R;
 
 public class TransFormingOperater extends AppCompatActivity {
 
+    String TAG="TransFormingOperater";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,6 +27,7 @@ public class TransFormingOperater extends AppCompatActivity {
     }
 
 
+//    This operator periodically gather items from an Observable into bundles and emit these bundles rather than emitting the items one at a time
     public void bufferOperater(View view)
     {
         Observable.just("A", "B", "C", "D", "E", "F")
@@ -41,7 +42,8 @@ public class TransFormingOperater extends AppCompatActivity {
                     public void onNext(List<String> strings) {
                         System.out.println("onNext(): ");
                         for (String s : strings) {
-                            System.out.println("String: " + s);
+                            Log.d(TAG, "buffer  "+strings);
+
                         }
                     }
 
@@ -76,7 +78,7 @@ public class TransFormingOperater extends AppCompatActivity {
 
                     @Override
                     public void onNext(Integer integer) {
-                        System.out.println("onNext: " + integer);
+                        Log.d(TAG, "map onNext: "+integer);
                     }
 
                     @Override
@@ -123,7 +125,7 @@ public class TransFormingOperater extends AppCompatActivity {
          * Here we are using flatMap() to multiply the resulting integer by 2
          * & emitting the result in another Observable.
          */
-        getOriginalObservable()
+        getOriginalObservable() //123456
                 .flatMap(new Function<Integer, Observable<Integer>>() {
                     @Override
                     public Observable<Integer> apply(final Integer integer)  {
@@ -139,7 +141,7 @@ public class TransFormingOperater extends AppCompatActivity {
 
                     @Override
                     public void onNext(Integer integer) {
-                        System.out.println("onNext: " + integer);
+                        Log.d(TAG, "flatMap onNext: "+integer);
                     }
 
                     @Override
@@ -191,7 +193,8 @@ public class TransFormingOperater extends AppCompatActivity {
 //                });
 //    }
 
-    public void switchMap(View view){
+    public void switchMap(View view)
+    {
         getOriginalObservable()
                 .switchMap(new Function<Integer, Observable<Integer>>() {
                     @Override
@@ -208,7 +211,7 @@ public class TransFormingOperater extends AppCompatActivity {
 
                     @Override
                     public void onNext(Integer integer) {
-                        System.out.println("onNext: " + integer);
+                        Log.d(TAG, "switchMap onNext: "+integer);
                     }
 
                     @Override
@@ -243,7 +246,8 @@ public class TransFormingOperater extends AppCompatActivity {
 
                     @Override
                     public void onNext(Integer integer) {
-                        System.out.println("onNext: " + integer);
+                        Log.d(TAG, "concatMap onNext: "+integer);
+
                     }
 
                     @Override
@@ -289,7 +293,7 @@ public class TransFormingOperater extends AppCompatActivity {
 
                                 @Override
                                 public void onNext(Integer integer) {
-                                    System.out.println("onNext: " + integer);
+                                    Log.d(TAG, "groupBy onNext: "+integer);
                                 }
 
                                 @Override
@@ -318,7 +322,7 @@ public class TransFormingOperater extends AppCompatActivity {
     }
 
     
-    public void rangeOperater(View view)
+    public void scanOperater(View view)
     {
         Observable.range(1, 10)
                 .scan(new BiFunction<Integer, Integer, Integer>() {
@@ -335,7 +339,7 @@ public class TransFormingOperater extends AppCompatActivity {
 
                     @Override
                     public void onNext(Integer integer) {
-                        System.out.println("onNext: " + integer);
+                        Log.d(TAG, " scan onNext: "+integer);
                     }
 
                     @Override

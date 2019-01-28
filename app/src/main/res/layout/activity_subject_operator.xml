@@ -9,65 +9,49 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".RxOperaters.ObservableOperaterActivity">
+    tools:context=".RxOperaters.SubjectOperatorActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical">
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="subscribeCreateObserver"
-            android:text="create"
-            android:textAllCaps="false"
-            android:textColor="@android:color/black" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="range"
+            android:onClick="asyncSubject"
             android:textAllCaps="false"
-            android:onClick="rangeOperater"
+            android:text="asyncSubject"
             android:textColor="@android:color/black" />
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="from"
+            android:onClick="behaviourSubject"
             android:textAllCaps="false"
-            android:onClick="fromCallable"
+            android:text="behaviourSubject"
+            android:textColor="@android:color/black" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="publishsubject"
+            android:textAllCaps="false"
+            android:text="publishSunject"
+            android:textColor="@android:color/black" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="replaySubject"
+            android:textAllCaps="false"
+            android:text="replaysubject"
             android:textColor="@android:color/black" />
 
-        <Button
+        <TextView
+            android:id="@+id/textView"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="repeat"
-            android:textAllCaps="false"
-            android:onClick="repeatOperater"
+            android:layout_height="@dimen/_200sdp"
             android:textColor="@android:color/black" />
 
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="timer"
-            android:textAllCaps="false"
-            android:onClick="timerInterval"
-            android:textColor="@android:color/black" />
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="interval"
-            android:textAllCaps="false"
-            android:onClick="intervalOperater"
-            android:textColor="@android:color/black" />
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="just"
-            android:textAllCaps="false"
-            android:onClick="justOperater"
-            android:textColor="@android:color/black" />
-
-        <!--android:onClick="fromObservableActivity"-->
     </LinearLayout>
-</ScrollView>
+
+    </ScrollView>
+

@@ -9,7 +9,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".RxOperaters.OperatorsActivity">
+    tools:context=".RxOperaters.FilteringActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -19,43 +19,71 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="observableActivity"
-            android:text="@string/observableOperator"
+            android:textAllCaps="false"
+            android:onClick="distinctOperater"
+            android:text="distinct"
             android:textColor="@android:color/black" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="combinOperaterActivtiy"
-            android:text="@string/combineOperators"
+            android:onClick="elementAtOperater"
+            android:text="elementAt"
+            android:textAllCaps="false"
             android:textColor="@android:color/black" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="conditionBololeanOperaterActivity"
-            android:text="@string/conditionBooleanOperator"
+            android:onClick="filterOperater"
+            android:text="filter"
+            android:textAllCaps="false"
             android:textColor="@android:color/black" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="filteringOperatorActivity"
-            android:text="@string/filteringOperator"
+            android:onClick="ignoreElements"
+            android:textAllCaps="false"
+            android:text="IgnoreElements"
             android:textColor="@android:color/black" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="transFormingOperaterActivity"
-            android:text="@string/transformingOperater"
+            android:textAllCaps="false"
+            android:onClick="sampleOperater"
+            android:text="sample"
             android:textColor="@android:color/black" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="utilityOperaterActivity"
-            android:text="@string/utilityOperater"
+            android:textAllCaps="false"
+            android:onClick="skipOperater"
+            android:text="skip"
+            android:textColor="@android:color/black" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:onClick="skipLastOperater"
+            android:text="skipLast"
+            android:textColor="@android:color/black" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:onClick="takeOperater"
+            android:text="take"
+            android:textColor="@android:color/black" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:onClick="takeLastOberator"
+            android:text="takeLast"
             android:textColor="@android:color/black" />
     </LinearLayout>
 </ScrollView>

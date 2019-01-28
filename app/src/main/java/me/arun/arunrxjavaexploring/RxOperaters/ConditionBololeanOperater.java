@@ -4,9 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-
 import java.util.concurrent.TimeUnit;
-
 import io.reactivex.Observable;
 import io.reactivex.ObservableEmitter;
 import io.reactivex.ObservableOnSubscribe;
@@ -17,8 +15,8 @@ import io.reactivex.disposables.Disposable;
 import io.reactivex.functions.Function;
 import io.reactivex.functions.Predicate;
 import me.arun.arunrxjavaexploring.R;
-
-public class ConditionBololeanOperater extends AppCompatActivity {
+public class ConditionBololeanOperater extends AppCompatActivity
+{
 
     String  TAG="ConditionBololeanOperater";
     @Override
@@ -27,9 +25,9 @@ public class ConditionBololeanOperater extends AppCompatActivity {
         setContentView(R.layout.activity_condition_bololean_operater);
     }
 
-    public void allOperater(View view){
+    public void allOperater(View view) {
 
-        Observable.just(0, 1, 2, 3, 4, 0, 6, 0)
+        Observable.just(0, 1, 2, 3, 4, 0, 6, 0,-1)
                 .all(item -> item > 0)
                 .subscribe(new SingleObserver<Boolean>() {
                     @Override
@@ -39,7 +37,7 @@ public class ConditionBololeanOperater extends AppCompatActivity {
 
                     @Override
                     public void onSuccess(Boolean aBoolean) {
-                        Log.d(TAG, "all: onSuccess: ");
+                        Log.d(TAG, "all: onSuccess: "+aBoolean);
                     }
 
                     @Override
@@ -59,7 +57,7 @@ public class ConditionBololeanOperater extends AppCompatActivity {
                     }
                 });
 
-        Observable<Integer> observable2 = Observable.timer(3, TimeUnit.SECONDS)
+        Observable<Integer> observable2 = Observable.timer(6, TimeUnit.SECONDS)
                 .flatMap(new Function<Long, ObservableSource<Integer>>() {
                     @Override
                     public ObservableSource<Integer> apply(Long aLong) throws Exception {
@@ -76,7 +74,7 @@ public class ConditionBololeanOperater extends AppCompatActivity {
 
                     @Override
                     public void onNext(Integer integer) {
-                        Log.d(TAG, "onNext: ambArray");
+                        Log.d(TAG, "onNext: ambArray"+integer);
                     }
 
                     @Override
@@ -200,7 +198,7 @@ public class ConditionBololeanOperater extends AppCompatActivity {
 
                     @Override
                     public void onNext(Integer integer) {
-                        Log.d(TAG, "onNext: skipUntilOperater ");
+                        Log.d(TAG, "onNext: skipUntilOperater "+integer);
                     }
 
                     @Override
@@ -238,7 +236,7 @@ public class ConditionBololeanOperater extends AppCompatActivity {
 
                     @Override
                     public void onNext(Object o) {
-                        Log.d(TAG, "onNext: "+0);
+                        Log.d(TAG, "onNext: "+o);
                     }
 
                     @Override
@@ -291,7 +289,8 @@ public class ConditionBololeanOperater extends AppCompatActivity {
                 });
     }
 
-    public void takeWhile(View view){
+    public void takeWhile(View view)
+    {
         Observable
                 .create(emitter -> {
                     for(int i=0; i<= 6; i++) {

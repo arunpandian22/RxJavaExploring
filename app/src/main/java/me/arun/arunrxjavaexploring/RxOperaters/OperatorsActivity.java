@@ -35,4 +35,9 @@ public class OperatorsActivity extends AppCompatActivity
         startActivity(new Intent(OperatorsActivity.this,  UtilityOperater.class));
     }
 
+    public void subjectOperators(View view)
+    {
+        startActivity(new Intent(OperatorsActivity.this,  SubjectOperatorActivity.class));
+    }
+
 }

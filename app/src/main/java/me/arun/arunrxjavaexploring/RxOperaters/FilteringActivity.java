@@ -37,7 +37,7 @@ String TAG="FilteringActivity ";
 
                     @Override
                     public void onNext(Integer integer) {
-                        System.out.println("onNext: " + integer);
+                        System.out.println("distinct onNext: " + integer);
                     }
 
                     @Override
@@ -63,7 +63,7 @@ String TAG="FilteringActivity ";
 
                     @Override
                     public void onSuccess(Integer integer) {
-                        System.out.println("onNext: " + integer);
+                        System.out.println("elementAt onNext: " + integer);
                     }
 
                     @Override
@@ -95,7 +95,7 @@ String TAG="FilteringActivity ";
 
                     @Override
                     public void onNext(Integer integer) {
-                        System.out.println("onNext: " + integer);
+                        System.out.println("filter onNext: " + integer);
                     }
 
                     @Override
@@ -121,7 +121,7 @@ String TAG="FilteringActivity ";
 
                     @Override
                     public void onComplete() {
-                        System.out.println("Completed");
+                        System.out.println("ingnoreElements Completed");
                     }
 
                     @Override
@@ -131,15 +131,15 @@ String TAG="FilteringActivity ";
                 });
     }
 
-    public void sampleOperater(View view){
+    public void sampleOperater(View view) {
 
         Observable timedObservable = Observable
-                .just(1, 2, 3, 4, 5, 6)
+                .just(1, 2, 3, 4, 5, 6,8,10,12,14)
                 .zipWith(Observable.interval(
                         0, 1, TimeUnit.SECONDS), (item, time) -> item);
 
         timedObservable
-                .sample(2, TimeUnit.SECONDS)
+                .sample(4, TimeUnit.SECONDS)
                 .subscribe(new Observer() {
                     @Override
                     public void onSubscribe(Disposable d) {
@@ -148,7 +148,7 @@ String TAG="FilteringActivity ";
 
                     @Override
                     public void onNext(Object o) {
-                        System.out.println("onNext: " + o);
+                        Log.d(TAG, "sample onNext: "+o);
                     }
 
                     @Override
@@ -164,7 +164,7 @@ String TAG="FilteringActivity ";
     }
 
 
-    public void testSkipOperater(View view) throws InterruptedException {
+    public void skipOperater(View view) throws InterruptedException {
 
         Observable.just("A", "B", "C", "D", "E", "F", "G", "H", "I", "J")
                 .skip(4)
@@ -176,7 +176,7 @@ String TAG="FilteringActivity ";
 
                     @Override
                     public void onNext(String s) {
-                        System.out.println("onNext: " + s);
+                        Log.d(TAG, "skipOperator onNext: "+s);
                     }
 
                     @Override
@@ -193,8 +193,8 @@ String TAG="FilteringActivity ";
 
 
 
-        public void testSkipLastOperater(View view) throws InterruptedException {
-
+        public void skipLastOperater(View view) throws InterruptedException
+        {
             Observable.just("A", "B", "C", "D", "E", "F", "G", "H", "I", "J")
                     .skipLast(4)
                     .subscribe(new Observer<String>() {
@@ -205,7 +205,7 @@ String TAG="FilteringActivity ";
 
                         @Override
                         public void onNext(String s) {
-                            System.out.println("onNext: " + s);
+                            Log.d(TAG, "skiplast onNext: "+s);
                         }
 
                         @Override
@@ -233,7 +233,7 @@ String TAG="FilteringActivity ";
 
                         @Override
                         public void onNext(String s) {
-                            Log.d(TAG, "onNext: ");
+                            Log.d(TAG, "take onNext: "+s);
                         }
 
                         @Override
@@ -249,7 +249,8 @@ String TAG="FilteringActivity ";
         }
 
 
-    public void takeLastObservable(View view) {
+    public void takeLastOberator(View view)
+    {
 
         Observable.just("A", "B", "C", "D", "E", "F", "G", "H", "I", "J")
                 .takeLast(4)
@@ -261,7 +262,7 @@ String TAG="FilteringActivity ";
 
                     @Override
                     public void onNext(String s) {
-                        System.out.println("onNext: " + s);
+                        Log.d(TAG, "takelast onNext: "+s);
                     }
 
                     @Override

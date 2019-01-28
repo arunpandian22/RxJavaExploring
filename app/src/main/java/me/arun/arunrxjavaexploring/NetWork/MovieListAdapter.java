@@ -21,7 +21,6 @@ import com.bumptech.glide.request.target.Target;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import me.arun.arunrxjavaexploring.R;
@@ -29,8 +28,6 @@ import me.arun.arunrxjavaexploring.RoomDB.models.response.nowPlaying.Result;
 import me.arun.arunrxjavaexploring.utils.AppStrings;
 import me.arun.arunrxjavaexploring.utils.colourPalleteUtil.ColourPalleteUtil;
 import me.arun.arunrxjavaexploring.utils.colourPalleteUtil.PalleteColourListener;
-
-
 /**
  * A Adapter class to list the categorys in grid
  * Created by Arun Pandian M on 25/December/2018

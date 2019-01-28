@@ -11,7 +11,6 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 public class HomeActivity extends AppCompatActivity
 {
-
     List<ModelFeatureCategory> modelFeatureCategories = new ArrayList<>();
     @BindView(R.id.toolbar)
     Toolbar toolbar;
@@ -41,15 +40,17 @@ public class HomeActivity extends AppCompatActivity
 
     public void setFeatureCategoryList()
     {
-        ModelFeatureCategory networkRequest = new ModelFeatureCategory("@drawable/ic_network_request", FeatureCategory.NETWORK);
-        modelFeatureCategories.add(networkRequest);
-        ModelFeatureCategory sampleRequest = new ModelFeatureCategory("@drawable/ic_network_request", FeatureCategory.OPERATOR);
-        modelFeatureCategories.add(sampleRequest);
-        ModelFeatureCategory fileUpload = new ModelFeatureCategory("@drawable/ic_network_request", FeatureCategory.ROOMDB);
-        modelFeatureCategories.add(fileUpload);
-        ModelFeatureCategory fileDownLoad = new ModelFeatureCategory("@drawable/ic_network_request",FeatureCategory.CHAINING);
-        modelFeatureCategories.add(fileDownLoad);
-        ModelFeatureCategory graphQl = new ModelFeatureCategory("@drawable/ic_network_request",FeatureCategory.PAGINATION);
-        modelFeatureCategories.add(graphQl);
+        ModelFeatureCategory sample = new ModelFeatureCategory("@drawable/ic_network_request", FeatureCategory.SAMPLE);
+        modelFeatureCategories.add(sample);
+        ModelFeatureCategory sampleOperator = new ModelFeatureCategory("@drawable/ic_network_request", FeatureCategory.OPERATOR);
+        modelFeatureCategories.add(sampleOperator);
+        ModelFeatureCategory roomDb= new ModelFeatureCategory("@drawable/ic_network_request", FeatureCategory.ROOMDB);
+        modelFeatureCategories.add(roomDb);
+        ModelFeatureCategory rxBus= new ModelFeatureCategory("@drawable/ic_network_request",FeatureCategory.RXBUS);
+        modelFeatureCategories.add(rxBus);
+        ModelFeatureCategory pagination = new ModelFeatureCategory("@drawable/ic_network_request",FeatureCategory.PAGINATION);
+        modelFeatureCategories.add(pagination);
+        ModelFeatureCategory network = new ModelFeatureCategory("@drawable/ic_network_request",FeatureCategory.NETWORK);
+        modelFeatureCategories.add(network);
     }
 }

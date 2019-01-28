@@ -9,7 +9,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".RxOperaters.OperatorsActivity">
+    tools:context=".RxOperaters.TransFormingOperater">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -19,42 +19,56 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="observableActivity"
-            android:text="@string/observableOperator"
+            android:onClick="bufferOperater"
+            android:text="buffer"
+            android:textAllCaps="false"
             android:textColor="@android:color/black" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="combinOperaterActivtiy"
-            android:text="@string/combineOperators"
+            android:onClick="mapOperater"
+            android:text="map"
+            android:textAllCaps="false"
             android:textColor="@android:color/black" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="conditionBololeanOperaterActivity"
-            android:text="@string/conditionBooleanOperator"
+            android:onClick="flatMap"
+            android:text="flatMap"
+            android:textAllCaps="false"
             android:textColor="@android:color/black" />
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="filteringOperatorActivity"
-            android:text="@string/filteringOperator"
-            android:textColor="@android:color/black" />
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="transFormingOperaterActivity"
-            android:text="@string/transformingOperater"
+            android:onClick="switchMap"
+            android:text="switchMap"
+            android:textAllCaps="false"
             android:textColor="@android:color/black" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="utilityOperaterActivity"
-            android:text="@string/utilityOperater"
+            android:onClick="conCatMapOperater"
+            android:text="concatMap"
+            android:textAllCaps="false"
+            android:textColor="@android:color/black" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="scanOperater"
+            android:text="scan"
+            android:textAllCaps="false"
+            android:textColor="@android:color/black" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="groupBy"
+            android:text="groupBy"
+            android:textAllCaps="false"
             android:textColor="@android:color/black" />
 
     </LinearLayout>

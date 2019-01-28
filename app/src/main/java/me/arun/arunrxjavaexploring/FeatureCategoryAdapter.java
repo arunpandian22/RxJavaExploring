@@ -20,6 +20,7 @@ import me.arun.arunrxjavaexploring.NetWork.SampleRequestActivity;
 import me.arun.arunrxjavaexploring.RoomDB.RoomDbMainActivity;
 import me.arun.arunrxjavaexploring.RxOperaters.OperatorsActivity;
 import me.arun.arunrxjavaexploring.pagination.PaginationActivity;
+import me.arun.arunrxjavaexploring.rxBus.RXBusChaeckActivity;
 
 /**
  * A Adapter class to list the categorys in grid
@@ -76,6 +77,9 @@ public class FeatureCategoryAdapter extends RecyclerView.Adapter<FeatureCategory
     {
         switch (title)
         {
+            case FeatureCategory.SAMPLE:
+                activity.startActivity(new Intent(activity, RxBasicActivity.class));
+                break;
 
             case FeatureCategory.OPERATOR:
                 activity.startActivity(new Intent(activity, OperatorsActivity.class));
@@ -93,6 +97,9 @@ public class FeatureCategoryAdapter extends RecyclerView.Adapter<FeatureCategory
             case FeatureCategory.PAGINATION:
                 activity.startActivity(new Intent(activity, PaginationActivity.class));
                 break;
+
+            case FeatureCategory.RXBUS:
+                activity.startActivity(new Intent(activity, RXBusChaeckActivity.class));
 
 //                activity.startActivity(new Intent(activity, GraphQlActivity.class));
 

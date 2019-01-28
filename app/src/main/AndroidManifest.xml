@@ -52,7 +52,8 @@
         <activity android:name=".RxOperaters.CombinOperaterActivtiy" />
         <activity android:name=".RxOperaters.UtilityOperater" />
         <activity android:name=".RxOperaters.ConditionBololeanOperater" />
-        <activity android:name=".Observables.ObservableActivity"></activity>
+        <activity android:name=".Observables.ObservableActivity" />
+        <activity android:name=".RxOperaters.SubjectOperatorActivity"></activity>
     </application>
 
 </manifest>

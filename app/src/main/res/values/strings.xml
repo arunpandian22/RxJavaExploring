@@ -45,7 +45,6 @@
     <string name="conditionBooleanOperator">Condition Boolean Operators</string>
 
 
-
     <!--CombineOperators-->
     <string name="combineLatestOperator">combineLatest</string>
     <string name="joinOperater">join</string>

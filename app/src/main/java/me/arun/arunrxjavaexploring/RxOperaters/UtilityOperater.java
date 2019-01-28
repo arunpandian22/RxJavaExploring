@@ -3,6 +3,7 @@ package me.arun.arunrxjavaexploring.RxOperaters;
 import android.annotation.SuppressLint;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 
 import java.util.concurrent.Callable;
@@ -20,10 +21,12 @@ import io.reactivex.schedulers.Timed;
 import io.reactivex.subjects.Subject;
 import me.arun.arunrxjavaexploring.R;
 
-public class UtilityOperater extends AppCompatActivity {
-
+public class UtilityOperater extends AppCompatActivity
+{
+ String TAG="UtilityOperater";
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_utility_operater);
     }
@@ -40,7 +43,7 @@ public class UtilityOperater extends AppCompatActivity {
 
                     @Override
                     public void onNext(String s) {
-                        System.out.println("onNext: " + s);
+                        Log.d(TAG, "onNext: "+s);
                     }
 
                     @Override
@@ -55,16 +58,17 @@ public class UtilityOperater extends AppCompatActivity {
                 });
     }
 
-    public void doOnEach(View view){
-        /* Example of doOnNext()  */
-        Observable.just("A", "B", "C", "D", "E", "F")
-                .doOnNext(new Consumer<String>() {
-                    @Override
-                    public void accept(String s) {
-                        System.out.println("doOnNext: " + s);
-                    }
-                })
-                .subscribe();
+    public void doOnEach(View view)
+    {
+//        /* Example of doOnNext()  */
+//        Observable.just("A", "B", "C", "D", "E", "F")
+//                .doOnNext(new Consumer<String>() {
+//                    @Override
+//                    public void accept(String s) {
+//                        Log.d(TAG, "doOnEach accept: "+s);
+//                    }
+//                })
+//                .subscribe();
 
         /* Example of doOnSubscribe(), doOnUnSubscribe(), doOnEach()  */
         Observable.range(1, 5)
@@ -93,7 +97,7 @@ public class UtilityOperater extends AppCompatActivity {
                 .doOnSubscribe(new Consumer<Disposable>() {
                     @Override
                     public void accept(Disposable disposable) {
-                        System.out.println("onUnSubscribe is called");
+                        System.out.println("onSubscribe is called");
                     }
                 })
                 .subscribe();
@@ -118,9 +122,11 @@ public class UtilityOperater extends AppCompatActivity {
                          *
                          * Here we can basically fetch items that are successful
                          * & omit items that resulted in error.
-                         *
-                         *  */
-                        System.out.println(stringNotification.getValue());
+                         */
+
+
+
+                        Log.d(TAG, "onNext: "+stringNotification.getValue());
                     }
 
                     @Override
@@ -148,7 +154,7 @@ public class UtilityOperater extends AppCompatActivity {
 
                     @Override
                     public void onNext(Integer integer) {
-                        System.out.println("2 * length of string: " + integer);
+                        Log.d(TAG, "onNext: 2 * length of string:"+integer);
                     }
 
                     @Override
@@ -164,16 +170,17 @@ public class UtilityOperater extends AppCompatActivity {
     }
 
     @SuppressLint("CheckResult")
-    public void subscribeOn(){
+    public void subscribeOn(View view){
         Observable.range(1, 5)
                 .map(i -> i * 100)
                 .doOnNext(i -> {
-                    System.out.println("Emitting " + i + " on thread " + Thread.currentThread().getName());
+
+                    Log.d(TAG, "subscribeOn: Emitting  " + i + " on thread " + Thread.currentThread().getName());
                 })
                 .subscribeOn(Schedulers.computation())
                 .map(i -> i * 10)
                 .subscribe(i -> {
-                    System.out.println("Received " + i + " on thread " + Thread.currentThread().getName());
+                    Log.d(TAG, "subscribeOn: received" + i + " on thread " + Thread.currentThread().getName());
                 });
     }
 
@@ -215,7 +222,7 @@ public class UtilityOperater extends AppCompatActivity {
 
                     @Override
                     public void onNext(Timed<Long> longTimed) {
-                        System.out.println("onNext: " + longTimed);
+                        Log.d(TAG, "onNext: "+longTimed);
                     }
 
                     @Override
@@ -243,13 +250,14 @@ public class UtilityOperater extends AppCompatActivity {
 
                     @Override
                     public void onNext(Long aLong) {
-                        System.out.println("onNext: " + aLong);
+
+                        Log.d(TAG, "onNext: "+aLong);
                     }
 
                     @Override
                     public void onError(Throwable e) {
                         e.printStackTrace();
-                        System.out.println("onError: ");
+                        Log.d(TAG, "onError: "+e.getMessage());
                     }
 
                     @Override
@@ -272,7 +280,7 @@ public class UtilityOperater extends AppCompatActivity {
 
                     @Override
                     public void onNext(Timed<Long> longTimed) {
-                        System.out.println(longTimed);
+                        Log.d(TAG, "onNext: timeStamedOperater"+longTimed);
                     }
 
                     @Override
@@ -311,7 +319,7 @@ public class UtilityOperater extends AppCompatActivity {
                 new Consumer<String>() {
                     @Override
                     public void accept(String s) {
-                        System.out.println("Disposable: " + s);
+                        Log.d(TAG, "accept: "+s);
                     }
                 }
         )
@@ -324,7 +332,7 @@ public class UtilityOperater extends AppCompatActivity {
 
                     @Override
                     public void onNext(Character character) {
-                        System.out.println("onNext: " + character);
+                        Log.d(TAG, "onNext: "+character);
                     }
 
                     @Override

@@ -2,13 +2,12 @@ package me.arun.arunrxjavaexploring.RxOperaters;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
-
 import io.reactivex.Observable;
 import io.reactivex.ObservableEmitter;
 import io.reactivex.ObservableOnSubscribe;
@@ -16,10 +15,14 @@ import io.reactivex.Observer;
 import io.reactivex.disposables.Disposable;
 import me.arun.arunrxjavaexploring.R;
 
-public class ObservableOperaterActivity extends AppCompatActivity {
+public class ObservableOperaterActivity extends AppCompatActivity
+{
    List<String> alphabets=new ArrayList<>();
    Observer createObserver;
    Observable createObservable;
+   String TAG="ObservableOperaterActivity";
+   Disposable disposable;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,8 +36,10 @@ public class ObservableOperaterActivity extends AppCompatActivity {
 
     }
 
-    public void justOperater(View view){
-        Observable.just(new String[]{"A", "B", "C", "D", "E", "F"})
+    // in single emission
+    public void justOperater(View view)
+    {
+        Observable.just(new String[]{"A", "B", "C", "D", "E", "F","A", "B", "C", "D", "E", "F"})
                 .subscribe(new Observer<String[]>() {
                     @Override
                     public void onSubscribe(Disposable d) {
@@ -43,7 +48,8 @@ public class ObservableOperaterActivity extends AppCompatActivity {
 
                     @Override
                     public void onNext(String[] strings) {
-                        System.out.println("onNext: " + Arrays.toString(strings));
+                        Log.d(TAG, "onNext: "+strings.toString());
+                        Log.d(TAG, "onNext: "+Arrays.toString(strings));
                     }
 
                     @Override
@@ -59,9 +65,12 @@ public class ObservableOperaterActivity extends AppCompatActivity {
     }
 
 
+
+
     public void rangeOperater(View view)
     {
-        Observable.range(2, 5)
+
+        Observable.range(2, 5) // emits 2 to 6
                 .subscribe(new Observer<Integer>() {
                     @Override
                     public void onSubscribe(Disposable d) {
@@ -70,7 +79,8 @@ public class ObservableOperaterActivity extends AppCompatActivity {
 
                     @Override
                     public void onNext(Integer integer) {
-                        System.out.println("onNext: " + integer);
+
+                        Log.d(TAG, "onNext: "+integer);
                     }
 
                     @Override
@@ -84,12 +94,13 @@ public class ObservableOperaterActivity extends AppCompatActivity {
                     }
                 });
     }
+
 
 
     public void repeatOperater(View view)
     {
         Observable.range(2, 5)
-                .repeat(2)
+                .repeat(2) // 2 times repeats the same values
                 .subscribe(new Observer<Integer>() {
                     @Override
                     public void onSubscribe(Disposable d) {
@@ -98,7 +109,7 @@ public class ObservableOperaterActivity extends AppCompatActivity {
 
                     @Override
                     public void onNext(Integer integer) {
-                        System.out.println("onNext: " + integer);
+                        Log.d(TAG, "onNext: "+integer);
                     }
 
                     @Override
@@ -124,7 +135,7 @@ public class ObservableOperaterActivity extends AppCompatActivity {
 
                     @Override
                     public void onNext(Long aLong) {
-                        System.out.println("onNext: " + aLong);
+                        Log.d(TAG, "onNext: "+aLong);
                     }
 
                     @Override
@@ -164,7 +175,8 @@ public class ObservableOperaterActivity extends AppCompatActivity {
 
                     @Override
                     public void onNext(String string) {
-                        System.out.println("onNext: " + string);
+
+                        Log.d(TAG, "onNext: "+string);
                     }
 
                     @Override
@@ -182,7 +194,8 @@ public class ObservableOperaterActivity extends AppCompatActivity {
 
 
 
-    public void intervalOperater(View view){
+    public void intervalOperater(View view)
+    {
 
         /*
          * This will print values from 0 after every second.
@@ -190,18 +203,22 @@ public class ObservableOperaterActivity extends AppCompatActivity {
         Observable.interval(1, TimeUnit.SECONDS)
                 .subscribe(new Observer<Long>() {
                     @Override
-                    public void onSubscribe(Disposable d) {
-
+                    public void onSubscribe(Disposable d)
+                    {
+                        disposable=d;
                     }
 
                     @Override
-                    public void onNext(Long value) {
-                        System.out.println("onNext: " + value);
+                    public void onNext(Long value)
+                    {
+                        Log.d(TAG, "onNext: "+value);
+                        if(value>10 &&disposable!=null)
+                            disposable.dispose();
                     }
 
                     @Override
                     public void onError(Throwable e) {
-                        System.out.println("onError: " + e.getMessage());
+                        Log.d(TAG, "onError: "+e.getMessage());
                     }
 
                     @Override
@@ -279,12 +296,12 @@ public class ObservableOperaterActivity extends AppCompatActivity {
         {
             @Override
             public void onSubscribe(Disposable d) {
-                System.out.println("onSubscribe");
+                Log.d(TAG, "onSubscribe: ");
             }
 
             @Override
             public void onNext(Object o) {
-                System.out.println("onNext: " + o);
+                Log.d(TAG, "onNext: "+o);
             }
 
             @Override

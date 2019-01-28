@@ -9,7 +9,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".RxOperaters.OperatorsActivity">
+    tools:context=".RxOperaters.UtilityOperater">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -19,42 +19,71 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="observableActivity"
-            android:text="@string/observableOperator"
+            android:onClick="delayOperater"
+            android:text="delay"
+            android:textAllCaps="false"
             android:textColor="@android:color/black" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="combinOperaterActivtiy"
-            android:text="@string/combineOperators"
+            android:onClick="doOnEach"
+            android:textAllCaps="false"
+            android:text="doOnEach"
             android:textColor="@android:color/black" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="conditionBololeanOperaterActivity"
-            android:text="@string/conditionBooleanOperator"
+            android:textAllCaps="false"
+            android:onClick="materialize"
+            android:text="materialize"
             android:textColor="@android:color/black" />
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="filteringOperatorActivity"
-            android:text="@string/filteringOperator"
-            android:textColor="@android:color/black" />
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="transFormingOperaterActivity"
-            android:text="@string/transformingOperater"
+            android:onClick="observeOn"
+            android:text="observeOn"
+            android:textAllCaps="false"
             android:textColor="@android:color/black" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="utilityOperaterActivity"
-            android:text="@string/utilityOperater"
+            android:onClick="subscribeOn"
+            android:textAllCaps="false"
+            android:text="subscribeOn"
+            android:textColor="@android:color/black" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="timeInterVal"
+            android:textAllCaps="false"
+            android:text="timeInterval"
+            android:textColor="@android:color/black" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="timeOutOperater"
+            android:textAllCaps="false"
+            android:text="timeOut"
+            android:textColor="@android:color/black" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="timeStampOperater"
+            android:textAllCaps="false"
+            android:text="timeStamp"
+            android:textColor="@android:color/black" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="usingOperater"
+            android:textAllCaps="false"
+            android:text="using"
             android:textColor="@android:color/black" />
 
     </LinearLayout>
